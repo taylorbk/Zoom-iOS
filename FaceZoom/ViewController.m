@@ -2149,14 +2149,13 @@ int allKnowingInt = 0;
     NSArray *ver = [[UIDevice currentDevice].systemVersion componentsSeparatedByString:@"."];
     if ([[ver objectAtIndex:0] intValue] >= 7) {
         // iOS 7.0 or later
-        //self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0 green:0.84375 blue:0.28125 alpha:1];
-        self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0.15234375 green:1 blue:0.9296875 alpha:1];
+        self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:18.0/256.0 green:234.0/256.0 blue:150.0/256.0 alpha:1];
         self.navigationController.navigationBar.translucent = YES;
         //self.tabBarController.tabBar.barTintColor = [UIColor colorWithRed:0.15234375 green:1 blue:0.9296875 alpha:1];
         //self.tabBarController.tabBar.translucent = NO;
     }else {
         // iOS 6.1 or earlier
-        self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0.15234375 green:1 blue:0.9296875 alpha:1];
+        self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:18.0/256.0 green:234.0/256.0 blue:150.0/256.0 alpha:1];
         //self.tabBarController.tabBar.tintColor = [UIColor colorWithRed:0.15234375 green:1 blue:0.9296875 alpha:1];
     }
     //self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(onButtonDoneClicked)];
@@ -2165,7 +2164,7 @@ int allKnowingInt = 0;
     //self.navigationController.title = @"Make a GIF";
     
     //self.title = @"FaceZoom";
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"background"] forBarMetrics:UIBarMetricsDefault];
+    //[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"background"] forBarMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar  setTintColor:[UIColor whiteColor]];
         
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo2"]];
@@ -2185,7 +2184,6 @@ int allKnowingInt = 0;
     
     // set the bar background color
     //[self.tabBarController.tabBar setBackgroundImage:[self imageFromColor:backgroundColor forSize:CGSizeMake(320, 49) withCornerRadius:0]];
-    [self.tabBarController.tabBar setBackgroundImage:[self imageFromColor:backgroundColor forSize:CGSizeMake(320, 49) withCornerRadius:0]];
     
     // set the text color for selected state
     [self.tabBarController.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], UITextAttributeTextColor, nil] forState:UIControlStateSelected];

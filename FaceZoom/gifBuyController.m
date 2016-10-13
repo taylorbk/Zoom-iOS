@@ -404,7 +404,8 @@ lineView.backgroundColor = [UIColor whiteColor];
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"background"] forBarMetrics:UIBarMetricsDefault];
+    //[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"background"] forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:18.0/256.0 green:234.0/256.0 blue:150.0/256.0 alpha:1];
     [delegate applyCloudLayerAnimation];
     [self.navigationController.navigationBar setTitleTextAttributes:
      [NSDictionary dictionaryWithObjectsAndKeys:
@@ -422,7 +423,7 @@ lineView.backgroundColor = [UIColor whiteColor];
 }
 
 -(void)viewDidDisappear:(BOOL)animated{
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"background"] forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:18.0/256.0 green:234.0/256.0 blue:150.0/256.0 alpha:1];
     [delegate applyCloudLayerAnimation];
 
 }
